@@ -1,9 +1,8 @@
 package com.bangkit.eventapp.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddCircle
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.rounded.Home
+import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -34,17 +33,17 @@ fun BottomBar(
         val navigationItems = listOf(
             NavigationItem(
                 title = stringResource(R.string.menu_home),
-                icon = Icons.Default.Home,
+                icon = Icons.Rounded.Home,
                 screen = Screen.Home
             ),
             NavigationItem(
                 title = stringResource(R.string.menu_bookmark),
-                icon = ImageVector.vectorResource(id = R.drawable.bookmark_24px),
+                icon = ImageVector.vectorResource(id = R.drawable.bookmark_filled_24px),
                 screen = Screen.Bookmark
             ),
             NavigationItem(
                 title = stringResource(R.string.menu_about),
-                icon = Icons.Default.Person,
+                icon = Icons.Rounded.Person,
                 screen = Screen.About
             ),
         )

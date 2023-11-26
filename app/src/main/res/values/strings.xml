@@ -9,4 +9,7 @@
     <string name="end_date">End Date</string>
     <string name="back">Back</string>
     <string name="bookmark">Bookmark</string>
+    <string name="placeholder_search">Cari event disini</string>
+    <string name="error_text">Terjadi kesalahan. Silakan coba lagi nanti.</string>
+    <string name="no_data">Tidak ada data yang ditemukan.</string>
 </resources>

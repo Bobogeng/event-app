@@ -67,7 +67,7 @@ fun DetailScreen(
                 viewModel.getEventById(eventId)
             }
             is UiState.Success -> {
-                val data = uiState.data.event
+                val data = uiState.data
                 DetailContent(
                     image = data.image,
                     title = data.title,

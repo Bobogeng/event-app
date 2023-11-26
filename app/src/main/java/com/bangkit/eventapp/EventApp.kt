@@ -6,7 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -67,15 +66,8 @@ fun EventApp(
             }
             composable(Screen.Bookmark.route) {
                 BookmarkScreen(
-                    navigateToHome = {
-                        navController.popBackStack()
-                        navController.navigate(Screen.Home.route) {
-                            popUpTo(navController.graph.findStartDestination().id) {
-                                saveState = true
-                            }
-                            launchSingleTop = true
-                            restoreState = true
-                        }
+                    navigateToDetail = { eventId ->
+                        navController.navigate(Screen.DetailEvent.createRoute(eventId))
                     }
                 )
             }
